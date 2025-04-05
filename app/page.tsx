@@ -1,103 +1,123 @@
-import Image from "next/image";
+"use client"
+
+import Link from "next/link"
+import { CalendarDays, Clock, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Separator } from "@/components/ui/separator"
+import { Sidebar } from "@/components/Sidebar"
+
+const mockPosts = [
+  {
+    id: 1,
+    title: "Getting Started with shadcn/ui",
+    shortText: "Learn how to build beautiful and accessible UIs with shadcn/ui and Next.js",
+    slug: "getting-started-with-shadcn-ui",
+    date: "2024-04-04",
+    readTime: "5 min",
+    category: "Next.js",
+  },
+  {
+    id: 2,
+    title: "Building a Blog with Next.js",
+    shortText: "A comprehensive guide to building a modern blog with Next.js and TypeScript",
+    slug: "building-blog-with-nextjs",
+    date: "2024-04-03",
+    readTime: "8 min",
+    category: "React",
+  },
+  {
+    id: 3,
+    title: "The Power of Server Components",
+    shortText: "Understanding React Server Components and their benefits in Next.js applications",
+    slug: "power-of-server-components",
+    date: "2024-04-02",
+    readTime: "6 min",
+    category: "React",
+  },
+]
+
+const categories = [
+  { name: "Next.js", count: 12 },
+  { name: "React", count: 8 },
+  { name: "TypeScript", count: 5 },
+]
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      {/* Hero Section */}
+      <section className="text-center space-y-4 mb-8">
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+          Welcome to My Blog
+        </h1>
+        <p className="mx-auto max-w-[700px] text-muted-foreground">
+          Discover articles about web development, programming, and technology.
+        </p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      <Separator className="my-8" />
+
+      {/* Main Content */}
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Blog Posts */}
+        <main className="flex-1 min-w-0">
+          <h2 className="text-3xl font-bold tracking-tight mb-6">Latest Posts</h2>
+          <div className="grid gap-6">
+            {mockPosts.map((post) => (
+              <Card key={post.id} className="group">
+                <CardHeader>
+                  <div className="flex items-center justify-between flex-wrap gap-4">
+                    <Badge variant="secondary">{post.category}</Badge>
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <CalendarDays className="h-4 w-4" />
+                        <span>{post.date}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-4 w-4" />
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <CardTitle className="group-hover:text-primary transition-colors mt-4">
+                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                  </CardTitle>
+                  <CardDescription className="text-base">{post.shortText}</CardDescription>
+                </CardHeader>
+                <CardFooter>
+                  <Button variant="ghost" className="ml-auto group-hover:text-primary" asChild>
+                    <Link href={`/blog/${post.slug}`}>
+                      Read More <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        </main>
+
+        {/* Sidebar */}
+        <aside className="w-full lg:w-[350px] shrink-0">
+          <Sidebar
+            categories={categories}
+            popularPosts={mockPosts.map(({ id, title, slug, date }) => ({
+              id,
+              title,
+              slug,
+              date,
+            }))}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        </aside>
+      </div>
+    </>
+  )
 }
