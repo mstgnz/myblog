@@ -3,15 +3,11 @@ import React from 'react';
 const AboutPage = () => {
   return (
     <div className="container xl:max-w-6xl mx-auto px-4 flex flex-col gap-4 lg:gap-6">
-      {/* layout */}
       <div className="grid grid-cols-1 gap-4 lg:gap-6 py-6">
-        {/* sidebar */}
-
         <div className="max-lg:order-1 max-lg:mb-12 lg:col-span-2 py-4">
           <h1 className="text-2xl md:text-3xl font-medium border-b border-dashed border-neutral-200 pb-3">
             About
           </h1>
-          {/* post */}
           <div className="relative post-content pt-4">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum

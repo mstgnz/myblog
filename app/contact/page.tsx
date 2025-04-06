@@ -4,21 +4,17 @@ import { Mail, Phone, MessageSquare, Video } from 'lucide-react';
 const ContactPage = () => {
   return (
     <div className="container xl:max-w-6xl mx-auto px-4 flex flex-col gap-4 lg:gap-6">
-      {/* layout */}
       <div className="grid grid-cols-1 gap-4 lg:gap-6 py-6">
-        {/* sidebar */}
-
         <div className="max-lg:order-1 max-lg:mb-12 lg:col-span-2 py-4">
           <h1 className="text-2xl md:text-3xl font-medium border-b border-dashed border-neutral-200 pb-3">
             Contact Us
           </h1>
-          {/* post */}
           <div className="relative post-content pt-4">
             <p>
-              Thank you for your interest in reaching out to us! At [Company Name], we value your
-              feedback, inquiries, and any other communication you may have. Whether you have
-              questions about our products, services, or would simply like to provide suggestions,
-              our dedicated team is here to assist you.
+              Thank you for your interest in reaching out to us! At My Blog, we value your feedback,
+              inquiries, and any other communication you may have. Whether you have questions about
+              our products, services, or would simply like to provide suggestions, our dedicated
+              team is here to assist you.
             </p>
 
             <p>Feel free to get in touch with us through the following channels:</p>
@@ -88,7 +84,6 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
-          {/* navigation */}
           <div className="flex items-center justify-end gap-3 py-4 border-t border-dashed border-neutral-200"></div>
         </div>
       </div>

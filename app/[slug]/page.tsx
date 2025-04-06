@@ -22,15 +22,12 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
   const { slug } = await params;
   return (
     <div className="container xl:max-w-6xl mx-auto px-4 flex flex-col gap-4 lg:gap-6">
-      {/* layout */}
       <div className="grid grid-cols-1 py-6">
         <div className="relative">
           <h1 className="text-2xl md:text-3xl lg:text-4xl md:text-center font-medium py-4">
             Top 10 Must-Try Street Foods Around The World
           </h1>
-          {/* data */}
           <div className="pb-4 w-full flex items-center md:justify-center gap-4 text-sm text-neutral-500 border-b border-dashed border-neutral-200">
-            {/*author*/}
             <Link
               href="#"
               rel="author"
@@ -39,12 +36,10 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
               <User size={16} className="me-2" />
               <span>by aribudin</span>
             </Link>
-            {/*date*/}
             <time className="news-date" dateTime="2024-06-16">
               <Calendar size={16} className="me-2" />
               <span>May 11, 2024</span>
             </time>
-            {/*category*/}
             <Link
               href="#"
               rel="category"
@@ -55,7 +50,6 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             </Link>
           </div>
 
-          {/* post */}
           <div className="relative post-content pt-4">
             <p>
               Exploring street foods around the world is an adventure for your taste buds. From
