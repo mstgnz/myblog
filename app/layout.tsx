@@ -1,33 +1,23 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Inter } from "next/font/google";
-import { Providers } from "./providers";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import Sidebar from "@/components/sidebar";
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from 'next';
+import './globals.css';
+import { Inter } from 'next/font/google';
+import { Providers } from './providers';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "My Blog",
-  description: "A modern blog built with Next.js and shadcn/ui",
+  title: 'My Blog',
+  description: 'A modern blog built with Next.js and shadcn/ui',
 };
 
-export default function RootLayout({children}:{children: React.ReactNode}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr" className="min-h-screen">
-      <body className={`${inter.className} flex min-h-screen flex-col bg-background antialiased px-[10%]`}>
+      <body className={`${inter.className} text-neutral-700 font-sans`}>
         <Providers>
           <Header />
-          <main className="flex-1 container py-8">
-            <div className="flex gap-8">
-              <div className="w-4/5">
-                {children}
-              </div>
-              <div className="w-1/5">
-                <Sidebar />
-              </div>
-            </div>
-          </main>
+          <main className="relative">{children}</main>
           <Footer />
         </Providers>
       </body>
