@@ -6,7 +6,7 @@ const HomePage = () => {
     <div>
       <h1>Home Page</h1>
 
-      <Button variant="destructive">Click me</Button>
+      <Button className='bg-red-500 text-white'>Click me!!</Button>
     </div>
   )
 }
