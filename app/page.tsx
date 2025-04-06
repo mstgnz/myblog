@@ -1,6 +1,7 @@
 import Sidebar from '@/components/sidebar';
 import React from 'react';
 import Link from 'next/link';
+import { User, ArrowRight } from 'lucide-react';
 
 const HomePage = () => {
   return (
@@ -39,7 +40,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <i className="bi bi-person"></i>
+                    <User size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -57,7 +58,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <i className="bi bi-arrow-right"></i>
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -87,7 +88,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <i className="bi bi-person"></i>
+                    <User size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -104,7 +105,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <i className="bi bi-arrow-right"></i>
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -134,7 +135,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <i className="bi bi-person"></i>
+                    <User size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -151,7 +152,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <i className="bi bi-arrow-right"></i>
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -181,7 +182,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <i className="bi bi-person"></i>
+                    <User size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -198,7 +199,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <i className="bi bi-arrow-right"></i>
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -228,7 +229,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <i className="bi bi-person"></i>
+                    <User size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -245,7 +246,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <i className="bi bi-arrow-right"></i>
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -275,7 +276,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <i className="bi bi-person"></i>
+                    <User size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -292,7 +293,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <i className="bi bi-arrow-right"></i>
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -324,7 +325,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <i className="bi bi-person"></i>
+                    <User size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -341,7 +342,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <i className="bi bi-arrow-right"></i>
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -371,7 +372,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <i className="bi bi-person"></i>
+                    <User size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -388,7 +389,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <i className="bi bi-arrow-right"></i>
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -401,7 +402,7 @@ const HomePage = () => {
               className="uppercase text-neutral-500 hover:text-black flex items-center text-sm gap-2"
               href="#"
             >
-              Older Posts <i className="bi bi-arrow-right"></i>
+              Older Posts <ArrowRight size={16} />
             </Link>
           </div>
         </div>

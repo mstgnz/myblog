@@ -2,6 +2,17 @@ import React from 'react';
 import Link from 'next/link';
 import Related from '@/components/related';
 import Comment from '@/components/comment';
+import {
+  User,
+  Calendar,
+  Bookmark,
+  Tags,
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Music,
+} from 'lucide-react';
 
 export async function generateStaticParams() {
   return [];
@@ -25,12 +36,12 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
               rel="author"
               className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
             >
-              <i className="bi bi-person me-2"></i>
+              <User size={16} className="me-2" />
               <span>by aribudin</span>
             </Link>
             {/*date*/}
             <time className="news-date" dateTime="2024-06-16">
-              <i className="bi bi-calendar me-2"></i>
+              <Calendar size={16} className="me-2" />
               <span>May 11, 2024</span>
             </time>
             {/*category*/}
@@ -39,7 +50,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
               rel="category"
               className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
             >
-              <i className="bi bi-bookmark me-2"></i>
+              <Bookmark size={16} className="me-2" />
               <span>Lifestyle</span>
             </Link>
           </div>
@@ -162,32 +173,6 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
               in Berlin.
             </p>
 
-            <blockquote>
-              <span className="absolute opacity-80 w-8 h-8">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="text-neutral-500"
-                  viewBox="0 0 270.000000 270.000000"
-                >
-                  <g
-                    transform="translate(0.000000,270.000000) scale(0.100000,-0.100000)"
-                    fill="currentColor"
-                    stroke="none"
-                  >
-                    <path d="M920 2182 c-290 -124 -482 -341 -540 -610 -30 -140 -40 -296 -40 -644 l0 -328 370 0 370 0 0 370 0 370 -181 0 -181 0 7 63 c26 243 129 387 342 477 35 15 66 29 69 32 7 7 -132 298 -143 298 -4 0 -37 -13 -73 -28z"></path>
-                    <path d="M2179 2186 c-249 -103 -442 -295 -520 -516 -50 -142 -61 -247 -66 -677 l-5 -393 371 0 371 0 0 370 0 370 -181 0 -181 0 7 53 c21 170 67 281 150 363 51 49 143 107 215 134 19 7 39 17 44 21 10 9 -124 298 -139 298 -5 0 -35 -10 -66 -23z"></path>
-                  </g>
-                </svg>
-              </span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                ante.
-              </p>
-              <footer>
-                Quote by <cite title="Source Title">Jesicca</cite>
-              </footer>
-            </blockquote>
-
             <ul>
               <li>
                 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
@@ -214,7 +199,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             {/* tags */}
             <ul className="flex flex-wrap items-center gap-2 text-sm">
               <li>
-                <i className="bi bi-tags"></i> :
+                <Tags size={16} /> :
               </li>
               <li>
                 <Link
@@ -253,19 +238,19 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             {/* share */}
             <div className="flex items-center">
               <Link href="#" className="p-2 hover:opacity-80">
-                <i className="bi bi-facebook"></i>
+                <Facebook size={20} />
               </Link>
               <Link href="#" className="p-2 hover:opacity-80">
-                <i className="bi bi-instagram"></i>
+                <Instagram size={20} />
               </Link>
               <Link href="#" className="p-2 hover:opacity-80">
-                <i className="bi bi-twitter-x"></i>
+                <Twitter size={20} />
               </Link>
               <Link href="#" className="p-2 hover:opacity-80">
-                <i className="bi bi-linkedin"></i>
+                <Linkedin size={20} />
               </Link>
               <Link href="#" className="p-2 hover:opacity-80">
-                <i className="bi bi-tiktok"></i>
+                <Music size={20} />
               </Link>
             </div>
           </div>
@@ -311,7 +296,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
                       href="https://facebook.com"
                       title="Facebook"
                     >
-                      <i className="bi bi-facebook text-xl"></i>
+                      <Facebook size={20} />
                     </Link>
                   </li>
                   {/*twitter*/}
@@ -323,7 +308,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
                       href="https://twitter.com"
                       title="Twitter"
                     >
-                      <i className="bi bi-twitter text-xl"></i>
+                      <Twitter size={20} />
                     </Link>
                   </li>
                   {/*youtube*/}
@@ -335,7 +320,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
                       href="https://youtube.com"
                       title="Youtube"
                     >
-                      <i className="bi bi-linkedin text-xl"></i>
+                      <Linkedin size={20} />
                     </Link>
                   </li>
                   {/*instagram*/}
@@ -347,7 +332,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
                       href="https://instagram.com"
                       title="Instagram"
                     >
-                      <i className="bi bi-tiktok text-xl"></i>
+                      <Instagram size={20} />
                     </Link>
                   </li>
                 </ul>

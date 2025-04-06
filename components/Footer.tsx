@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -21,21 +22,21 @@ const Footer = () => {
                 href="#"
                 className="flex gap-2 py-3 border-b border-dashed last:border-b-0 border-neutral-200"
               >
-                <i className="bi bi-chevron-right"></i>
+                <ChevronRight size={16} />
                 <span>Home</span>
               </Link>
               <Link
                 href="#"
                 className="flex gap-2 py-3 border-b border-dashed last:border-b-0 border-neutral-200"
               >
-                <i className="bi bi-chevron-right"></i>
+                <ChevronRight size={16} />
                 <span>About</span>
               </Link>
               <Link
                 href="#"
                 className="flex gap-2 py-3 border-b border-dashed last:border-b-0 border-neutral-200"
               >
-                <i className="bi bi-chevron-right"></i>
+                <ChevronRight size={16} />
                 <span>Contact</span>
               </Link>
             </div>

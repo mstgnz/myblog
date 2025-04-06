@@ -1,4 +1,5 @@
 import React from 'react';
+import { Mail, Phone, MessageSquare, Video } from 'lucide-react';
 
 const ContactPage = () => {
   return (
@@ -23,17 +24,21 @@ const ContactPage = () => {
             <p>Feel free to get in touch with us through the following channels:</p>
 
             <div className="flex flex-col gap-1 mb-12">
-              <div>
-                <i className="bi bi-envelope"></i>: Support@mail.com
+              <div className="flex items-center gap-2">
+                <Mail size={16} />
+                <span>Support@mail.com</span>
               </div>
-              <div>
-                <i className="bi bi-telephone"></i>: (+123) 456 7890
+              <div className="flex items-center gap-2">
+                <Phone size={16} />
+                <span>(+123) 456 7890</span>
               </div>
-              <div>
-                <i className="bi bi-whatsapp"></i>: (+123) 456 7890
+              <div className="flex items-center gap-2">
+                <MessageSquare size={16} />
+                <span>(+123) 456 7890</span>
               </div>
-              <div>
-                <i className="bi bi-skype"></i>: Support@mail.com
+              <div className="flex items-center gap-2">
+                <Video size={16} />
+                <span>Support@mail.com</span>
               </div>
             </div>
 

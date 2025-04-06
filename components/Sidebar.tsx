@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 
 const Sidebar = () => {
   return (
@@ -13,28 +14,28 @@ const Sidebar = () => {
               className="flex items-center gap-3 justify-between py-1.5 hover:text-black"
             >
               <span>Home</span>
-              <i className="bi bi-chevron-right"></i>
+              <ChevronRight size={16} />
             </Link>
             <Link
               href="#"
               className="flex items-center gap-3 justify-between py-1.5 hover:text-black"
             >
               <span>About</span>
-              <i className="bi bi-chevron-right"></i>
+              <ChevronRight size={16} />
             </Link>
             <Link
               href="#"
               className="flex items-center gap-3 justify-between py-1.5 hover:text-black"
             >
               <span>Contact</span>
-              <i className="bi bi-chevron-right"></i>
+              <ChevronRight size={16} />
             </Link>
             <Link
               href="#"
               className="flex items-center gap-3 justify-between py-1.5 hover:text-black"
             >
               <span>Term Of Use</span>
-              <i className="bi bi-chevron-right"></i>
+              <ChevronRight size={16} />
             </Link>
           </div>
         </div>

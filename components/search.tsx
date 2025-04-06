@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Search as SearchIcon } from 'lucide-react';
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('Lifestyle');
@@ -28,7 +29,7 @@ const Search = () => {
           />
           {/* icon */}
           <button className="size-12 flex justify-center items-center absolute end-0 top-0 border border-neutral-200 bg-neutral-100 peer-focus:border-neutral-400">
-            <span className="bi bi-search text-base leading-none"></span>
+            <SearchIcon size={16} />
           </button>
         </div>
       </div>

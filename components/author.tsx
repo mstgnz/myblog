@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Facebook, Instagram, Twitter, Linkedin, Music } from 'lucide-react';
 
 const Author = () => {
   return (
@@ -21,19 +22,19 @@ const Author = () => {
         </p>
         <div className="flex justify-center items-center">
           <Link href="#" className="p-2 hover:opacity-80">
-            <i className="bi bi-facebook"></i>
+            <Facebook size={20} />
           </Link>
           <Link href="#" className="p-2 hover:opacity-80">
-            <i className="bi bi-instagram"></i>
+            <Instagram size={20} />
           </Link>
           <Link href="#" className="p-2 hover:opacity-80">
-            <i className="bi bi-twitter-x"></i>
+            <Twitter size={20} />
           </Link>
           <Link href="#" className="p-2 hover:opacity-80">
-            <i className="bi bi-linkedin"></i>
+            <Linkedin size={20} />
           </Link>
           <Link href="#" className="p-2 hover:opacity-80">
-            <i className="bi bi-tiktok"></i>
+            <Music size={20} />
           </Link>
         </div>
       </div>
