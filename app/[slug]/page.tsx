@@ -1,10 +1,15 @@
 import React from 'react'
 
-const BlogDetailPage = ({ params }: { params: { slug: string } }) => {
+export async function generateStaticParams() {
+  return []
+}
+
+const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = await params
   return (
     <div>
         <h1>Blog Detail Page</h1>
-        <p>{params.slug}</p>
+        <p>{slug}</p>
     </div>
   )
 }
