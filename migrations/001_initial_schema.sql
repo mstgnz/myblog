@@ -10,7 +10,9 @@ CREATE TABLE users (
     password VARCHAR NOT NULL,
     phone VARCHAR(20),
     logo VARCHAR,
+    code VARCHAR,
     active BOOLEAN DEFAULT true,
+    last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
