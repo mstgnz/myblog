@@ -5,7 +5,7 @@ import { cookies } from 'next/headers';
 import prisma from '@/lib/prisma';
 
 interface UserData {
-  id: string;
+  id: number;
   email: string;
   firstname: string;
   lastname: string;
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if user already exists
-    const existingUser = await prisma.user.findUnique({
+    const existingUser = await prisma.users.findUnique({
       where: { email }
     });
     
@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     // Create new user
-    const newUser = await prisma.user.create({
+    const newUser = await prisma.users.create({
       data: {
         firstname,
         lastname,
@@ -107,7 +107,7 @@ export async function PUT(request: NextRequest) {
     }
 
     // Find user
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { email }
     });
     
@@ -128,7 +128,7 @@ export async function PUT(request: NextRequest) {
     }
 
     // Update last login time
-    await prisma.user.update({
+    await prisma.users.update({
       where: { id: user.id },
       data: { last_login: new Date() }
     });
@@ -214,8 +214,8 @@ export async function GET() {
       ) as UserData;
       
       // Find user
-      const user = await prisma.user.findUnique({
-        where: { id: decoded.id }
+      const user = await prisma.users.findUnique({
+        where: { id: Number(decoded.id) }
       });
       
       if (!user) {
