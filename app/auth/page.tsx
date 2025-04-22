@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function AuthPage() {
   const [email, setEmail] = useState('');
@@ -10,6 +11,37 @@ export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
   const [message, setMessage] = useState('');
   const [user, setUser] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+
+  // Check authentication status when component mounts
+  useEffect(() => {
+    const checkAuthStatus = async () => {
+      try {
+        const response = await fetch('/api/user');
+        const contentType = response.headers.get('content-type');
+
+        if (!contentType || !contentType.includes('application/json')) {
+          setLoading(false);
+          return;
+        }
+
+        const data = await response.json();
+
+        if (response.ok && data.user) {
+          setUser(data.user);
+          // Redirect to homepage if user is already logged in
+          router.push('/');
+        }
+      } catch (error) {
+        // If error, user is not authenticated
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    checkAuthStatus();
+  }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,6 +83,11 @@ export default function AuthPage() {
 
       setMessage(isLogin ? 'Login successful!' : 'Registration successful!');
       setUser(data.user);
+
+      // Redirect to home page after successful login/registration
+      setTimeout(() => {
+        router.push('/');
+      }, 1000);
     } catch (error: any) {
       setMessage(error.message);
     }
@@ -108,6 +145,14 @@ export default function AuthPage() {
       setMessage(error.message);
     }
   };
+
+  if (loading) {
+    return (
+      <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
