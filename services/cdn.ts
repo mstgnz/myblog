@@ -5,16 +5,24 @@ interface CdnConfig {
     cdnToken: string;
 }
 
-// Environment variables should be prefixed with NEXT_PUBLIC_ to be accessible in the browser
 const config: CdnConfig = {
-    cdnEndpoint: process.env.NEXT_PUBLIC_CDN_ENDPOINT || 'https://your-cdn-endpoint.com/',
-    cdnToken: process.env.NEXT_PUBLIC_CDN_TOKEN || ''
+    cdnEndpoint: process.env.CDN_ENDPOINT || 'http://localhost:8080/v1/cdn',
+    cdnToken: process.env.CDN_TOKEN || ''
 };
 
 class CdnService {
     private axiosInstance: AxiosInstance;
 
-    constructor() {
+    private static instance: CdnService;
+  
+    public static getInstance(): CdnService {
+        if (!CdnService.instance) {
+        CdnService.instance = new CdnService();
+        }
+        return CdnService.instance;
+    }
+
+    private constructor() {
         this.axiosInstance = axios.create({
             baseURL: config.cdnEndpoint,
             headers: {
@@ -23,7 +31,7 @@ class CdnService {
         });
     }
 
-    async upload(pathName: string, file: File, bucketName: string = "turassist") {
+    async upload(pathName: string, file: File, bucketName: string = "pesinsattaksitleal") {
         const formData = new FormData();
         formData.append('file', file);
         formData.append('bucket', bucketName);
@@ -37,7 +45,7 @@ class CdnService {
         }
     }
 
-    async delete(objectName: string, bucketName: string = "turassist") {
+    async delete(objectName: string, bucketName: string = "pesinsattaksitleal") {
         try {
             const response = await this.axiosInstance.delete(`${bucketName}/${objectName}`);
             return response.data;
@@ -47,5 +55,4 @@ class CdnService {
     }
 }
 
-// Export a singleton instance
-export const cdnService = new CdnService(); 
+export const cdnService = CdnService.getInstance(); 
