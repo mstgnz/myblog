@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter, Linkedin, Music } from 'lucide-react';
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaMusic } from 'react-icons/fa';
 
 const Author = () => {
   return (
@@ -22,19 +22,19 @@ const Author = () => {
         </p>
         <div className="flex justify-center items-center">
           <Link href="#" className="p-2 hover:opacity-80">
-            <Facebook size={20} />
+            <FaFacebook size={20} />
           </Link>
           <Link href="#" className="p-2 hover:opacity-80">
-            <Instagram size={20} />
+            <FaInstagram size={20} />
           </Link>
           <Link href="#" className="p-2 hover:opacity-80">
-            <Twitter size={20} />
+            <FaTwitter size={20} />
           </Link>
           <Link href="#" className="p-2 hover:opacity-80">
-            <Linkedin size={20} />
+            <FaLinkedin size={20} />
           </Link>
           <Link href="#" className="p-2 hover:opacity-80">
-            <Music size={20} />
+            <FaMusic size={20} />
           </Link>
         </div>
       </div>

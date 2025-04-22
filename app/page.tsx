@@ -1,7 +1,7 @@
 import Sidebar from '@/components/sidebar';
 import React from 'react';
 import Link from 'next/link';
-import { User, ArrowRight } from 'lucide-react';
+import { FaUser, FaArrowRight } from 'react-icons/fa';
 
 const HomePage = () => {
   return (
@@ -40,7 +40,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <User size={16} />
+                    <FaUser size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -58,7 +58,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <ArrowRight size={16} />
+                    <FaArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -88,7 +88,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <User size={16} />
+                    <FaUser size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -105,7 +105,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <ArrowRight size={16} />
+                    <FaArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -135,7 +135,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <User size={16} />
+                    <FaUser size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -152,7 +152,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <ArrowRight size={16} />
+                    <FaArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -182,7 +182,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <User size={16} />
+                    <FaUser size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -199,7 +199,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <ArrowRight size={16} />
+                    <FaArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -229,7 +229,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <User size={16} />
+                    <FaUser size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -246,7 +246,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <ArrowRight size={16} />
+                    <FaArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -276,7 +276,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <User size={16} />
+                    <FaUser size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -293,7 +293,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <ArrowRight size={16} />
+                    <FaArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -325,7 +325,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <User size={16} />
+                    <FaUser size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -342,7 +342,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <ArrowRight size={16} />
+                    <FaArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -372,7 +372,7 @@ const HomePage = () => {
                     rel="author"
                     className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
-                    <User size={16} />
+                    <FaUser size={16} />
                     <span>Jesicca Thomson</span>
                   </Link>
                   {/*date*/}
@@ -389,7 +389,7 @@ const HomePage = () => {
                     className="mt-4 inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
                   >
                     <span>Read More</span>
-                    <ArrowRight size={16} />
+                    <FaArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -402,7 +402,7 @@ const HomePage = () => {
               className="uppercase text-neutral-500 hover:text-black flex items-center text-sm gap-2"
               href="#"
             >
-              Older Posts <ArrowRight size={16} />
+              Older Posts <FaArrowRight size={16} />
             </Link>
           </div>
         </div>

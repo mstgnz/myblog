@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MessageSquare, Video } from 'lucide-react';
+import { FaEnvelope, FaPhone, FaCommentAlt, FaVideo } from 'react-icons/fa';
 
 const ContactPage = () => {
   return (
@@ -21,19 +21,19 @@ const ContactPage = () => {
 
             <div className="flex flex-col gap-1 mb-12">
               <div className="flex items-center gap-2">
-                <Mail size={16} />
+                <FaEnvelope size={16} />
                 <span>Support@mail.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone size={16} />
+                <FaPhone size={16} />
                 <span>(+123) 456 7890</span>
               </div>
               <div className="flex items-center gap-2">
-                <MessageSquare size={16} />
+                <FaCommentAlt size={16} />
                 <span>(+123) 456 7890</span>
               </div>
               <div className="flex items-center gap-2">
-                <Video size={16} />
+                <FaVideo size={16} />
                 <span>Support@mail.com</span>
               </div>
             </div>

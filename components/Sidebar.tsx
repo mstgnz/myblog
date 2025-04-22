@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
+import { FaChevronRight } from 'react-icons/fa';
 
 const Sidebar = () => {
   return (
@@ -14,28 +14,28 @@ const Sidebar = () => {
               className="flex items-center gap-3 justify-between py-1.5 hover:text-black"
             >
               <span>Home</span>
-              <ChevronRight size={16} />
+              <FaChevronRight size={16} />
             </Link>
             <Link
               href="#"
               className="flex items-center gap-3 justify-between py-1.5 hover:text-black"
             >
               <span>About</span>
-              <ChevronRight size={16} />
+              <FaChevronRight size={16} />
             </Link>
             <Link
               href="#"
               className="flex items-center gap-3 justify-between py-1.5 hover:text-black"
             >
               <span>Contact</span>
-              <ChevronRight size={16} />
+              <FaChevronRight size={16} />
             </Link>
             <Link
               href="#"
               className="flex items-center gap-3 justify-between py-1.5 hover:text-black"
             >
               <span>Term Of Use</span>
-              <ChevronRight size={16} />
+              <FaChevronRight size={16} />
             </Link>
           </div>
         </div>

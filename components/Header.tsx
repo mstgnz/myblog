@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { X, Menu, Search } from 'lucide-react';
+import { FaTimes, FaBars, FaSearch } from 'react-icons/fa';
 
 const Header = () => {
   const [navToggle, setNavToggle] = useState(false);
@@ -16,7 +16,7 @@ const Header = () => {
               onClick={() => setNavToggle(!navToggle)}
               className="size-10 text-2xl block md:hidden z-50"
             >
-              {navToggle ? <X size={24} /> : <Menu size={24} />}
+              {navToggle ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
 
             <Link href="/" className="py-4 md:py-6 lg:py-12">
@@ -27,7 +27,7 @@ const Header = () => {
               onClick={() => setSearchToggle(!searchToggle)}
               className="size-10 text-xl block md:hidden z-50"
             >
-              <Search size={20} />
+              <FaSearch size={20} />
             </button>
           </div>
         </div>
@@ -106,7 +106,7 @@ const Header = () => {
                       id="search-form"
                     />
                     <button className="size-12 flex justify-center items-center absolute end-0 top-0 border border-neutral-200 bg-neutral-100 peer-focus:border-neutral-400">
-                      <Search size={20} />
+                      <FaSearch size={20} />
                     </button>
                   </div>
                 </div>

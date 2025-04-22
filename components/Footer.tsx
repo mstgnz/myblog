@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
+import { FaChevronRight } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -22,21 +22,21 @@ const Footer = () => {
                 href="#"
                 className="flex gap-2 py-3 border-b border-dashed last:border-b-0 border-neutral-200"
               >
-                <ChevronRight size={16} />
+                <FaChevronRight size={16} />
                 <span>Home</span>
               </Link>
               <Link
                 href="#"
                 className="flex gap-2 py-3 border-b border-dashed last:border-b-0 border-neutral-200"
               >
-                <ChevronRight size={16} />
+                <FaChevronRight size={16} />
                 <span>About</span>
               </Link>
               <Link
                 href="#"
                 className="flex gap-2 py-3 border-b border-dashed last:border-b-0 border-neutral-200"
               >
-                <ChevronRight size={16} />
+                <FaChevronRight size={16} />
                 <span>Contact</span>
               </Link>
             </div>

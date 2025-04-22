@@ -3,16 +3,16 @@ import Link from 'next/link';
 import Related from '@/components/related';
 import Comment from '@/components/comment';
 import {
-  User,
-  Calendar,
-  Bookmark,
-  Tags,
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
-  Music,
-} from 'lucide-react';
+  FaUser,
+  FaCalendarAlt,
+  FaBookmark,
+  FaTags,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaMusic,
+} from 'react-icons/fa';
 
 export async function generateStaticParams() {
   return [];
@@ -33,11 +33,11 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
               rel="author"
               className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
             >
-              <User size={16} className="me-2" />
+              <FaUser size={16} className="me-2" />
               <span>by aribudin</span>
             </Link>
             <time className="news-date" dateTime="2024-06-16">
-              <Calendar size={16} className="me-2" />
+              <FaCalendarAlt size={16} className="me-2" />
               <span>May 11, 2024</span>
             </time>
             <Link
@@ -45,7 +45,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
               rel="category"
               className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800"
             >
-              <Bookmark size={16} className="me-2" />
+              <FaBookmark size={16} className="me-2" />
               <span>Lifestyle</span>
             </Link>
           </div>
@@ -193,7 +193,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             {/* tags */}
             <ul className="flex flex-wrap items-center gap-2 text-sm">
               <li>
-                <Tags size={16} /> :
+                <FaTags size={16} /> :
               </li>
               <li>
                 <Link
@@ -232,19 +232,19 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
             {/* share */}
             <div className="flex items-center">
               <Link href="#" className="p-2 hover:opacity-80">
-                <Facebook size={20} />
+                <FaFacebook size={20} />
               </Link>
               <Link href="#" className="p-2 hover:opacity-80">
-                <Instagram size={20} />
+                <FaInstagram size={20} />
               </Link>
               <Link href="#" className="p-2 hover:opacity-80">
-                <Twitter size={20} />
+                <FaTwitter size={20} />
               </Link>
               <Link href="#" className="p-2 hover:opacity-80">
-                <Linkedin size={20} />
+                <FaLinkedin size={20} />
               </Link>
               <Link href="#" className="p-2 hover:opacity-80">
-                <Music size={20} />
+                <FaMusic size={20} />
               </Link>
             </div>
           </div>
@@ -290,7 +290,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
                       href="https://facebook.com"
                       title="Facebook"
                     >
-                      <Facebook size={20} />
+                      <FaFacebook size={20} />
                     </Link>
                   </li>
                   {/*twitter*/}
@@ -302,7 +302,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
                       href="https://twitter.com"
                       title="Twitter"
                     >
-                      <Twitter size={20} />
+                      <FaTwitter size={20} />
                     </Link>
                   </li>
                   {/*youtube*/}
@@ -314,7 +314,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
                       href="https://youtube.com"
                       title="Youtube"
                     >
-                      <Linkedin size={20} />
+                      <FaLinkedin size={20} />
                     </Link>
                   </li>
                   {/*instagram*/}
@@ -326,7 +326,7 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
                       href="https://instagram.com"
                       title="Instagram"
                     >
-                      <Instagram size={20} />
+                      <FaInstagram size={20} />
                     </Link>
                   </li>
                 </ul>
