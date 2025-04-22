@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaChevronRight } from 'react-icons/fa';
+import { FaChevronRight, FaUserCircle } from 'react-icons/fa';
 
 const Sidebar = () => {
   return (
@@ -36,6 +36,13 @@ const Sidebar = () => {
             >
               <span>Term Of Use</span>
               <FaChevronRight size={16} />
+            </Link>
+            <Link
+              href="/auth"
+              className="flex items-center gap-3 justify-between py-1.5 hover:text-black"
+            >
+              <span>Login / Register</span>
+              <FaUserCircle size={16} />
             </Link>
           </div>
         </div>
