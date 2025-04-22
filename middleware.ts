@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import jwt from 'jsonwebtoken';
+import { jwtVerify } from 'jose';
 
 interface UserData {
   id: number;
@@ -22,10 +22,12 @@ export async function middleware(request: NextRequest) {
     
     try {
       // Verify token and get user data
-      const decoded = jwt.verify(
-        token,
+      const secret = new TextEncoder().encode(
         process.env.JWT_SECRET || 'myJWTsecret'
-      ) as UserData;
+      );
+      
+      const { payload } = await jwtVerify(token, secret);
+      const decoded = payload as unknown as UserData;
       
       // Check if user id is 1 (admin)
       if (decoded.id !== 1) {
@@ -37,6 +39,7 @@ export async function middleware(request: NextRequest) {
       return NextResponse.next();
     } catch (error) {
       // Invalid token, redirect to login
+      console.log('error', error);
       return NextResponse.redirect(new URL('/auth', request.url));
     }
   }
